@@ -5,8 +5,8 @@ const users = []
 
 app.use(express.json())
 
-app.get('/usersget',(req,res)=>{
-    res.status(200).send(users)
+app.get('/',(req,res)=>{
+    res.send("Server is running !")
 })
 
 app.post('/users',(req,res)=>{
