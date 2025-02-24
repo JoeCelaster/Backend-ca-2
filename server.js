@@ -5,6 +5,10 @@ const users = []
 
 app.use(express.json())
 
+app.get('/usersget',(req,res)=>{
+    res.status(200).send(users)
+})
+
 app.post('/users',(req,res)=>{
     const {username,email,password,Dateofbirth} = req.body
     const newName = {username,email,password,Dateofbirth}
